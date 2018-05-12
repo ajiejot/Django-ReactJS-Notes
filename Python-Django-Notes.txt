@@ -1,0 +1,17 @@
+cheatcodes django
+
+pip install virtualenv 
+->create a new folder for your system (ex: mysite_project)
+->open cmd to its folder
+virtualenv env_mysite
+->activate Python virtual environment
+env_mysite\scripts\activate
+(ex: (env_mysite) C:\Users\Nigel\OneDrive\Documents\mysite_project>) 
+
+##INSTALL DJANGO
+pip install django
+django-admin startproject mysite <-createing the folder of the project
+
+python manage.py migrate <- creating database
+
+python manage.py runserver <- development server//
