@@ -16,7 +16,7 @@ python manage.py migrate <- creating database
 
 python manage.py runserver <- development server//
 
-pip install mysql <- install mysqlclient//
+pip install mysqlclient <- install mysqlclient//
 
 python manage.py createsuperuser  <-- create account to admin
 
