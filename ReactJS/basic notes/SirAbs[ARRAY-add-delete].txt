@@ -1,0 +1,49 @@
+class Employee extends React.Component{
+  constructor( props ){
+    super( props );
+    
+    this.state = {
+      employee_list : [ 'Axil Guapo', 'Nethan Matinik', 'Stephen Curri', 'Alvin Patrick' ]
+    }
+  }
+  removeEmp( idx ){
+    let { employee_list } = this.state;
+
+    employee_list.splice( idx, 1 );
+
+    this.setState( { employee_list : employee_list } );
+  }
+  addEmp(){
+    let { employee_list } = this.state;
+    employee_list.push('sample')
+    this.setState( { employee_list : employee_list } );
+  }
+  constructList(){
+    let { employee_list } = this.state;
+    let _arr = [];
+    
+
+    let len = employee_list.length;
+    for( let x = 0; x < len; x++ ){
+      let item = employee_list[ x ];
+      _arr.push( 
+        <li key = { x }>
+          { item } 
+          <FA name = 'trash' onClick = { this.removeEmp.bind( this, x ) }/> 
+        </li>
+      )
+    }
+
+    return _arr;
+  }
+  render(){
+    return(
+      <div>
+        <ul>
+          { this.constructList() }
+        </ul>
+        <button onClick = { this.addEmp.bind(this) }>ADD</button>
+      </div>
+    )
+  }
+}
