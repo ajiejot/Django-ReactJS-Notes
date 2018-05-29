@@ -1,24 +1,32 @@
-cheatcodes django
-
+##INSTALL VIRTUAL ENVIRONMENT
+Step 1: 
 pip install virtualenv 
 ->create a new folder for your system (ex: mysite_project)
 ->open cmd to its folder
+Step 2:
 virtualenv env_mysite
 ->activate Python virtual environment
 env_mysite\scripts\activate
 (ex: (env_mysite) C:\Users\Nigel\OneDrive\Documents\mysite_project>) 
 
 ##INSTALL DJANGO
+Step 1:
 pip install django
-django-admin startproject mysite <-createing the folder of the project
 
+Step 2:
+django-admin startproject mysite <-creating the folder of the project
+
+Step 3:
 python manage.py migrate <- creating database
 
-python manage.py runserver <- development server//
-
+Step 4: 
 pip install mysqlclient <- install mysqlclient//
+
+Step 5:
+python manage.py runserver <- development server//
 
 python manage.py createsuperuser  <-- create account to admin
 
 python manage.py makemigrations <-- add model in the admin
+
 python manage.py migrate <-- run this after makemigrations
